@@ -10,10 +10,10 @@ namespace GuessCore.Helpers
             MassageList = new List<string>();
             MassageList.Add("OperationComplite");
         }
-        public OperationResult(bool IsSuccess, IEnumerable<string> massages)
+        public OperationResult(bool IsSuccess, List<string> massages)
         {
             IsSuccessfulOperation = IsSuccess;
-            MassageList = new List<string>(massages);
+            MassageList = massages;
         }
         public bool IsSuccessfulOperation { get; }
 

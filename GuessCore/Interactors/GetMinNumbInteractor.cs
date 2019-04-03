@@ -1,18 +1,17 @@
 ﻿using GuessCore.Helpers;
-using GuessCore.Interactors.Base;
 using GuessCore.Interfaсes;
 using System;
 using System.Collections.Generic;
+using GuessCore.Interactors.Base;
 
 namespace GuessCore.Interactors
 {
-    public class GuessInteractor : GetInteractorBase, IInteractor
+    public class GetMinNumbInteractor : GetInteractorBase, IInteractor
     {
-        public GuessInteractor(IRespondent respondent, IConverter<int> converter)
+        public GetMinNumbInteractor(IRespondent respondent, IConverter<int> converter)
             : base(respondent, converter)
-        {
+        {}
 
-        }
         public OperationResult Interact(string request)
         {
             var resList = new List<string>();
@@ -21,12 +20,15 @@ namespace GuessCore.Interactors
             {
                 return res;
             }
-            
-            if (_respondent.TryToGuess(nam))
+
+            if (nam < 0)
             {
-                return new OperationResult();
+                resList.Add("Минимальное значение не может быть меньше нуля");
+                return new OperationResult(false, resList);
             }
-            return new OperationResult(false, new List<string>());
+
+            _respondent.MinNamber = nam;
+            return new OperationResult();
         }
     }
 }

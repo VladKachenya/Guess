@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using GuessCore.Converters;
 using GuessCore.Helpers;
 using GuessCore.Interactors;
 using GuessCore.Interfaсes;
@@ -13,7 +14,13 @@ namespace GuessCore.Facade
 
         public void Initialize()
         {
-            _interactors.Add(GuessCoreKeys.Interactors.LoginInteractorKey, new GuessInteractor(_respondentFactory.GetRespondent()));
+            var respondent = _respondentFactory.GetRespondent();
+            var toIntConverter = new ToIntConverter();
+            _interactors.Add(GuessCoreKeys.Interactors.GuessInteractorKey, new GuessInteractor(respondent, toIntConverter));
+            _interactors.Add(GuessCoreKeys.Interactors.GetMinNumbInteractorKey, new GetMinNumbInteractor(respondent, toIntConverter));
+            _interactors.Add(GuessCoreKeys.Interactors.GetMaxNumbInteractorKey, new GetMaxNambInteractor(respondent, toIntConverter));
+            _interactors.Add(GuessCoreKeys.Interactors.GetGuessesNamberInteractorKey, new GetGuessesNamberInteractor(respondent, toIntConverter));
+
         }
 
         public IInteractor this[string key] => _interactors[key];

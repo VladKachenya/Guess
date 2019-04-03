@@ -41,10 +41,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Converters\ToIntConverter.cs" />
     <Compile Include="Facade\GuessFacade.cs" />
     <Compile Include="Factories\RespondentFactory.cs" />
     <Compile Include="Helpers\GuessCoreKeys.cs" />
     <Compile Include="Helpers\OperationResult.cs" />
+    <Compile Include="Interactors\Base\GetInteractorBase.cs" />
+    <Compile Include="Interactors\GetGuessesNamberInteractor.cs" />
+    <Compile Include="Interactors\GetMaxNambInteractor.cs" />
+    <Compile Include="Interactors\GetMinNumbInteractor.cs" />
     <Compile Include="Interactors\GuessInteractor.cs" />
     <Compile Include="Interactors\LoginInteractor.cs" />
     <Compile Include="Interfaсes\Facade\IFacadeExternal.cs" />
@@ -52,6 +57,7 @@
     <Compile Include="Interfaсes\Factories\IRespondentFactory.cs" />
     <Compile Include="Interfaсes\IInteractor.cs" />
     <Compile Include="Interfaсes\IRespondent.cs" />
+    <Compile Include="Interfaсes\IConverter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Respondents\TestRespondent.cs" />
   </ItemGroup>
