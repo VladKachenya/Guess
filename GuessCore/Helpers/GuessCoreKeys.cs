@@ -2,7 +2,7 @@
 
 namespace GuessCore.Helpers
 {
-    public static class Keys
+    public static class GuessCoreKeys
     {
         public static class Interactors
         {

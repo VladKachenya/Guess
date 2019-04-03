@@ -41,14 +41,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Helpers\Keys.cs" />
+    <Compile Include="Facade\GuessFacade.cs" />
+    <Compile Include="Factories\RespondentFactory.cs" />
+    <Compile Include="Helpers\GuessCoreKeys.cs" />
     <Compile Include="Helpers\OperationResult.cs" />
+    <Compile Include="Interactors\GuessInteractor.cs" />
     <Compile Include="Interactors\LoginInteractor.cs" />
+    <Compile Include="Interfaсes\Facade\IFacadeExternal.cs" />
+    <Compile Include="Interfaсes\Facade\IFacadeInternal.cs" />
+    <Compile Include="Interfaсes\Factories\IRespondentFactory.cs" />
     <Compile Include="Interfaсes\IInteractor.cs" />
+    <Compile Include="Interfaсes\IRespondent.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Respondents\TestRespondent.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Factories\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

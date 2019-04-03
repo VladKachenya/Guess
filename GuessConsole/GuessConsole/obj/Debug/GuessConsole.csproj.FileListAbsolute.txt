@@ -1,0 +1,10 @@
+C:\Users\Vlad_UPR\Desktop\GitHub Repositores\Guess\GuessConsole\GuessConsole\bin\Debug\GuessConsole.exe.config
+C:\Users\Vlad_UPR\Desktop\GitHub Repositores\Guess\GuessConsole\GuessConsole\bin\Debug\GuessConsole.exe
+C:\Users\Vlad_UPR\Desktop\GitHub Repositores\Guess\GuessConsole\GuessConsole\bin\Debug\GuessConsole.pdb
+C:\Users\Vlad_UPR\Desktop\GitHub Repositores\Guess\GuessConsole\GuessConsole\bin\Debug\GuessCore.dll
+C:\Users\Vlad_UPR\Desktop\GitHub Repositores\Guess\GuessConsole\GuessConsole\bin\Debug\GuessCore.pdb
+C:\Users\Vlad_UPR\Desktop\GitHub Repositores\Guess\GuessConsole\GuessConsole\obj\Debug\GuessConsole.csprojAssemblyReference.cache
+C:\Users\Vlad_UPR\Desktop\GitHub Repositores\Guess\GuessConsole\GuessConsole\obj\Debug\GuessConsole.csproj.CoreCompileInputs.cache
+C:\Users\Vlad_UPR\Desktop\GitHub Repositores\Guess\GuessConsole\GuessConsole\obj\Debug\GuessConsole.csproj.CopyComplete
+C:\Users\Vlad_UPR\Desktop\GitHub Repositores\Guess\GuessConsole\GuessConsole\obj\Debug\GuessConsole.exe
+C:\Users\Vlad_UPR\Desktop\GitHub Repositores\Guess\GuessConsole\GuessConsole\obj\Debug\GuessConsole.pdb

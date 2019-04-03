@@ -1,0 +1,6 @@
+C:\Users\Vlad_UPR\Desktop\GitHub Repositores\Guess\GuessCore\bin\Debug\GuessCore.dll
+C:\Users\Vlad_UPR\Desktop\GitHub Repositores\Guess\GuessCore\bin\Debug\GuessCore.pdb
+C:\Users\Vlad_UPR\Desktop\GitHub Repositores\Guess\GuessCore\obj\Debug\GuessCore.csprojAssemblyReference.cache
+C:\Users\Vlad_UPR\Desktop\GitHub Repositores\Guess\GuessCore\obj\Debug\GuessCore.csproj.CoreCompileInputs.cache
+C:\Users\Vlad_UPR\Desktop\GitHub Repositores\Guess\GuessCore\obj\Debug\GuessCore.dll
+C:\Users\Vlad_UPR\Desktop\GitHub Repositores\Guess\GuessCore\obj\Debug\GuessCore.pdb
