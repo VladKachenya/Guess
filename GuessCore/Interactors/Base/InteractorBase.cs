@@ -5,29 +5,28 @@ using GuessCore.Interfaсes;
 
 namespace GuessCore.Interactors.Base
 {
-    public abstract class GetInteractorBase
+    public abstract class InteractorBase<T>
     {
         protected IRespondent _respondent;
-        protected IConverter<int> _converter;
+        protected IConverter<T> _converter;
 
-        public GetInteractorBase(IRespondent respondent, IConverter<int> converter)
+        public InteractorBase(IRespondent respondent, IConverter<T> converter)
         {
             _respondent = respondent;
             _converter = converter;
         }
 
-        protected OperationResult ToIntParser(out int res, string str)
+        protected OperationResult ToTParser(out T res, string str)
         {
             var resList = new List<string>();
-            res = 0;
+            res = default(T);
             try
             {
                 res = _converter.Convert(str);
             }
             catch (Exception e)
             {
-                resList.Add(e.Message);
-                return new OperationResult(false, resList);
+                return new OperationResult(false, e.Message);
             }
             return new OperationResult();
         }

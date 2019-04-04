@@ -1,10 +1,7 @@
-﻿using GuessCore.Factories;
+﻿using GuessCore.Facade;
 using GuessCore.Helpers;
-using GuessCore.Interactors;
-using System;
-using GuessCore.Facade;
 using GuessCore.Interfaсes;
-using GuessCore.Interfaсes.Facade;
+using System;
 
 namespace GuessConsole
 {
@@ -12,24 +9,34 @@ namespace GuessConsole
     {
         private static void Main(string[] args)
         {
-            IFacadeExternal guess = new GuessFacade(new RespondentFactory());
+            IGuessFacade guess = new GuessFacade();
             guess.Initialize();
             bool isBreak = false;
-
-            do
+            while (!isBreak)
             {
-                Console.WriteLine("Configyre respondent!");
-                isBreak = GetResponse(guess[GuessCoreKeys.Interactors.RespondentConfigureInteractorKey]);
-            } while (!isBreak);
+                Console.WriteLine("Ввидите уровень (Easy, Medium, Hard)");
+                var nam = Console.ReadLine();
+                isBreak = GetResponse(guess[InteractorKey.RespondentAutoConfigure], nam);
+            }
             Console.Clear();
 
+            isBreak = false;
+            var retryCounter = guess.GetRetryCounter();
+            isBreak = GetResponse(guess[InteractorKey.Guess], "");
+            while (!isBreak)
+            {
+                Console.WriteLine($"Оставшееся число попыток {retryCounter.Attempts}/{retryCounter.NumberOfAttempts}");
+                Console.WriteLine("Введите число");
+                var nam = Console.ReadLine();
+                isBreak = GetResponse(guess[InteractorKey.Guess], nam);
+            }
+            Console.Clear();
         }
 
-        private static bool GetResponse(IInteractor interactor)
+        private static bool GetResponse(IInteractor interactor, string str)
         {
-            var nam = Console.ReadLine();
-            var res = interactor.Interact(nam);
-            res.MassageList.ForEach(el => Console.WriteLine(el));
+            var res = interactor.Interact(str);
+            Console.WriteLine(res.Massage);
             return res.IsSuccessfulOperation;
         }
     }

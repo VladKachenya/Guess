@@ -7,16 +7,15 @@ namespace GuessCore.Helpers
         public OperationResult()
         {
             IsSuccessfulOperation = true;
-            MassageList = new List<string>();
-            MassageList.Add("OperationComplite");
+            Massage = "OperationComplite";
         }
-        public OperationResult(bool IsSuccess, List<string> massages)
+        public OperationResult(bool isSuccess, string massages)
         {
-            IsSuccessfulOperation = IsSuccess;
-            MassageList = massages;
+            IsSuccessfulOperation = isSuccess;
+            Massage = massages;
         }
         public bool IsSuccessfulOperation { get; }
 
-        public List<string> MassageList { get; }
+        public string Massage { get; }
     }
 }

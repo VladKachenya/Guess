@@ -5,9 +5,9 @@ using System.Collections.Generic;
 
 namespace GuessCore.Interactors
 {
-    public class RespondentConfigureInteractor : GetInteractorBase, IInteractor
+    public class RespondentManualConfigureInteractor : InteractorBase<int>, IInteractor
     {
-        public RespondentConfigureInteractor(IRespondent respondent, IConverter<int> converter)
+        public RespondentManualConfigureInteractor(IRespondent respondent, IConverter<int> converter)
             : base(respondent, converter)
         {
 
@@ -15,16 +15,14 @@ namespace GuessCore.Interactors
 
         public OperationResult Interact(string request)
         {
-            var resList = new List<string>();
             if (_respondent.MinNamber == null)
             {
                 if (string.IsNullOrWhiteSpace(request))
                 {
-                    resList.Add("Задайте минимальное число");
-                    return new OperationResult(false, resList);
+                    return new OperationResult(false, "Задайте минимальное число");
                 }
 
-                var res = this.ToIntParser(out var nam, request);
+                var res = this.ToTParser(out var nam, request);
                 if (!res.IsSuccessfulOperation)
                 {
                     return res;
@@ -32,8 +30,7 @@ namespace GuessCore.Interactors
 
                 if (nam < 0)
                 {
-                    resList.Add("Минимальное число не может быть отрицательным");
-                    return new OperationResult(false, resList);
+                    return new OperationResult(false, "Минимальное число не может быть отрицательным");
                 }
 
                 _respondent.MinNamber = nam;
@@ -45,11 +42,10 @@ namespace GuessCore.Interactors
             {
                 if (string.IsNullOrWhiteSpace(request))
                 {
-                    resList.Add("Задайте максимальное число диапазона");
-                    return new OperationResult(false, resList);
+                    return new OperationResult(false, "Задайте максимальное число диапазона");
                 }
 
-                var res = this.ToIntParser(out var nam, request);
+                var res = this.ToTParser(out var nam, request);
                 if (!res.IsSuccessfulOperation)
                 {
                     return res;
@@ -57,11 +53,11 @@ namespace GuessCore.Interactors
 
                 if (nam < _respondent.MinNamber + 2)
                 {
-                    resList.Add($"Максимальное чило не может быть меньшим {_respondent.MinNamber + 2}");
-                    return new OperationResult(false, resList);
+                    return new OperationResult(false, $"Максимальное чило не может быть меньшим {_respondent.MinNamber + 2}");
                 }
 
                 _respondent.MaxNamber = nam;
+                _respondent.SetNuberOfAttempts();
                 request = "";
             }
 
@@ -69,11 +65,10 @@ namespace GuessCore.Interactors
             {
                 if (string.IsNullOrWhiteSpace(request))
                 {
-                    resList.Add($"Загадайте число из диапазона [{_respondent.MinNamber},{_respondent.MaxNamber}]");
-                    return new OperationResult(false, resList);
+                    return new OperationResult(false, $"Загадайте число из диапазона [{_respondent.MinNamber},{_respondent.MaxNamber}]");
                 }
 
-                var res = this.ToIntParser(out var nam, request);
+                var res = this.ToTParser(out var nam, request);
                 if (!res.IsSuccessfulOperation)
                 {
                     return res;
@@ -81,12 +76,10 @@ namespace GuessCore.Interactors
 
                 if (nam < _respondent.MinNamber || nam > _respondent.MaxNamber)
                 {
-                    resList.Add(
-                        $"Число {nam} находится вне диапазоно  [{_respondent.MinNamber},{_respondent.MaxNamber}]");
-                    return new OperationResult(false, resList);
+                    return new OperationResult(false, $"Число {nam} находится вне диапазоно  [{_respondent.MinNamber},{_respondent.MaxNamber}]");
                 }
 
-                _respondent.MaxNamber = nam;
+                _respondent.GuessesNamber = nam;
             }
             return new OperationResult();
         }

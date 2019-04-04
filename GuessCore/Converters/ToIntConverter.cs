@@ -14,7 +14,7 @@ namespace GuessCore.Converters
             }
             catch
             {
-                throw new Exception($"Значение {str} не является числом");
+                throw new Exception($"Значение {str} не является доступным числом");
             }
             return res;
         }

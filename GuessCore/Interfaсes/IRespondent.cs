@@ -1,11 +1,13 @@
 ﻿namespace GuessCore.Interfaсes
 {
-    public interface IRespondent
+    public interface IRespondent : IRetryCounter
     {
         int? MaxNamber { get; set; }
         int? MinNamber { get; set; }
         int? GuessesNamber { get; set; }
+        void SetNuberOfAttempts();
 
-        bool TryToGuess(int i);
+        int TryGuess(int num);
+
     }
 }

@@ -3,32 +3,37 @@ using GuessCore.Converters;
 using GuessCore.Helpers;
 using GuessCore.Interactors;
 using GuessCore.Interfaсes;
-using GuessCore.Interfaсes.Facade;
-using GuessCore.Interfaсes.Factories;
+using GuessCore.ProcessEntitys;
 
 namespace GuessCore.Facade
 {
-    public class GuessFacade : IFacadeExternal
+    public class GuessFacade : IGuessFacade
     {
-        private readonly IRespondentFactory _respondentFactory;
+        private IRetryCounter _retryCounter;
 
         public void Initialize()
         {
-            var respondent = _respondentFactory.GetRespondent();
+            var respondent = new Respondent();
+            _retryCounter = respondent;
             var toIntConverter = new ToIntConverter();
-            _interactors.Add(GuessCoreKeys.Interactors.GuessInteractorKey, new GuessInteractor(respondent, toIntConverter));
-            _interactors.Add(GuessCoreKeys.Interactors.RespondentConfigureInteractorKey, new RespondentConfigureInteractor(respondent, toIntConverter));
-
+            _interactors.Add(InteractorKey.Guess, new GuessInteractor(respondent, toIntConverter));
+            _interactors.Add(InteractorKey.RespondentAutoConfigure, new  RespondentAutoConfigureInteractor(respondent, new ToLevelConverter()));
+            _interactors.Add(InteractorKey.RespondentManualConfigure, new RespondentManualConfigureInteractor(respondent, toIntConverter));
+            _interactors.Add(InteractorKey.Login, new LoginInteractor());
         }
 
-        public IInteractor this[string key] => _interactors[key];
-
-        private Dictionary<string, IInteractor> _interactors;
-
-        public GuessFacade(IRespondentFactory respondentFactory)
+        public IRetryCounter GetRetryCounter()
         {
-            _respondentFactory = respondentFactory;
-            _interactors = new Dictionary<string, IInteractor>();
+            return _retryCounter;
+        }
+
+        public IInteractor this[InteractorKey key] => _interactors[key];
+
+        private Dictionary<InteractorKey, IInteractor> _interactors;
+
+        public GuessFacade()
+        {
+            _interactors = new Dictionary<InteractorKey, IInteractor>();
         }
     }
 }

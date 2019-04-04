@@ -6,8 +6,10 @@ using System.Collections.Generic;
 
 namespace GuessCore.Interactors
 {
-    public class GuessInteractor : GetInteractorBase, IInteractor
+    public class GuessInteractor : InteractorBase<int>, IInteractor
     {
+        private string _range =>
+            $"Загаданное число находится в диапазоне  [{_respondent.MinNamber},{_respondent.MaxNamber}]";
         public GuessInteractor(IRespondent respondent, IConverter<int> converter)
             : base(respondent, converter)
         {
@@ -15,18 +17,32 @@ namespace GuessCore.Interactors
         }
         public OperationResult Interact(string request)
         {
-            var resList = new List<string>();
-            var res = this.ToIntParser(out var nam, request);
+            if (string.IsNullOrWhiteSpace(request))
+            {
+                return new OperationResult(false, _range);
+            }
+            var res = this.ToTParser(out var nam, request);
             if (!res.IsSuccessfulOperation)
             {
                 return res;
             }
-            
-            if (_respondent.TryToGuess(nam))
+
+            if (!_respondent.IsAttemptsRemained)
             {
-                return new OperationResult();
+                return new OperationResult(false, $"Вы израсходывали все свои попытки");
             }
-            return new OperationResult(false, new List<string>());
+            var tryGuessRes = _respondent.TryGuess(nam);
+
+            if (tryGuessRes < 0)
+            {
+                return new OperationResult(false, $"{_range} и больше {nam}");
+            }
+            if (tryGuessRes > 0)
+            {
+                return new OperationResult(false, $"{_range} и меньше {nam}");
+            }
+
+            return new OperationResult();
         }
     }
 }
