@@ -47,11 +47,9 @@
     <Compile Include="Helpers\GuessCoreKeys.cs" />
     <Compile Include="Helpers\OperationResult.cs" />
     <Compile Include="Interactors\Base\GetInteractorBase.cs" />
-    <Compile Include="Interactors\GetGuessesNamberInteractor.cs" />
-    <Compile Include="Interactors\GetMaxNambInteractor.cs" />
-    <Compile Include="Interactors\GetMinNumbInteractor.cs" />
     <Compile Include="Interactors\GuessInteractor.cs" />
     <Compile Include="Interactors\LoginInteractor.cs" />
+    <Compile Include="Interactors\RespondentConfigureInteractor.cs" />
     <Compile Include="Interfaсes\Facade\IFacadeExternal.cs" />
     <Compile Include="Interfaсes\Facade\IFacadeInternal.cs" />
     <Compile Include="Interfaсes\Factories\IRespondentFactory.cs" />

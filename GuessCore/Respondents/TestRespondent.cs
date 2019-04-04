@@ -11,9 +11,9 @@ namespace GuessCore.Respondents
             _guessing = guessing;
         }
 
-        public int MaxNamber { get; set; }
-        public int MinNamber { get; set; }
-        public int GuessesNamber { get; set; }
+        public int? MaxNamber { get; set; }
+        public int? MinNamber { get; set; }
+        public int? GuessesNamber { get; set; }
 
         public bool TryToGuess(int nam)
         {

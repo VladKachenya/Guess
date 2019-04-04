@@ -17,9 +17,7 @@ namespace GuessCore.Facade
             var respondent = _respondentFactory.GetRespondent();
             var toIntConverter = new ToIntConverter();
             _interactors.Add(GuessCoreKeys.Interactors.GuessInteractorKey, new GuessInteractor(respondent, toIntConverter));
-            _interactors.Add(GuessCoreKeys.Interactors.GetMinNumbInteractorKey, new GetMinNumbInteractor(respondent, toIntConverter));
-            _interactors.Add(GuessCoreKeys.Interactors.GetMaxNumbInteractorKey, new GetMaxNambInteractor(respondent, toIntConverter));
-            _interactors.Add(GuessCoreKeys.Interactors.GetGuessesNamberInteractorKey, new GetGuessesNamberInteractor(respondent, toIntConverter));
+            _interactors.Add(GuessCoreKeys.Interactors.RespondentConfigureInteractorKey, new RespondentConfigureInteractor(respondent, toIntConverter));
 
         }
 

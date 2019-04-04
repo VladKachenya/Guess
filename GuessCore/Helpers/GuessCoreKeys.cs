@@ -7,10 +7,9 @@ namespace GuessCore.Helpers
         public static class Interactors
         {
             public const string LoginInteractorKey = "LoginInteractor";
-            public const string GetMinNumbInteractorKey = "GetMinNumbInteractor";
-            public const string GetMaxNumbInteractorKey = "GetMaxNumbInteractor";
+
             public const string GuessInteractorKey = "GuessInteractor";
-            public const string GetGuessesNamberInteractorKey = "GetGuessesNamberInteractor";
+            public const string RespondentConfigureInteractorKey = "RespondentConfigureInteractor";
 
         }
     }

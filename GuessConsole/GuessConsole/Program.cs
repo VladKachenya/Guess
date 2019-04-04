@@ -18,30 +18,11 @@ namespace GuessConsole
 
             do
             {
-                Console.WriteLine("Enter min namber!");
-                isBreak = GetResponse(guess[GuessCoreKeys.Interactors.GetMinNumbInteractorKey]);
+                Console.WriteLine("Configyre respondent!");
+                isBreak = GetResponse(guess[GuessCoreKeys.Interactors.RespondentConfigureInteractorKey]);
             } while (!isBreak);
             Console.Clear();
 
-            do
-            {
-                Console.WriteLine("Enter max namber!");
-                isBreak = GetResponse(guess[GuessCoreKeys.Interactors.GetMaxNumbInteractorKey]);
-            } while (!isBreak);
-            Console.Clear();
-
-            do
-            {
-                Console.WriteLine("Enter guessesNumber!");
-                isBreak = GetResponse(guess[GuessCoreKeys.Interactors.GetGuessesNamberInteractorKey]);
-            } while (!isBreak);
-            Console.Clear();
-            
-            do
-            {
-                Console.WriteLine("Enter namber!");
-                isBreak = GetResponse(guess[GuessCoreKeys.Interactors.GuessInteractorKey]);
-            } while (!isBreak);
         }
 
         private static bool GetResponse(IInteractor interactor)
