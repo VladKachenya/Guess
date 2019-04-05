@@ -2,9 +2,10 @@
 {
     public enum InteractorKey
     {
-        Guess,
         Login,
         RespondentAutoConfigure,
-        RespondentManualConfigure
+        RespondentManualConfigure,
+        Guess, 
+        SaveCurentPlayer
     }
 }

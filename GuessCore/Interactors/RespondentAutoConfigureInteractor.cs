@@ -14,6 +14,10 @@ namespace GuessCore.Interactors
 
         public OperationResult Interact(string request)
         {
+            if (string.IsNullOrWhiteSpace(request))
+            {
+                return new OperationResult(false, "Выберите сложность (Easy, Medium, Hard):");
+            }
             var res = this.ToTParser(out var level, request);
             if (!res.IsSuccessfulOperation)
             {

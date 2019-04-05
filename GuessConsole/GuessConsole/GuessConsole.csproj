@@ -43,6 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GuessStuff\GameStaffBase.cs" />
+    <Compile Include="GuessStuff\MultiplayerGameStaff.cs" />
+    <Compile Include="GuessStuff\SingleplayerGameStaff.cs" />
+    <Compile Include="Helpre\ConsoleHelper.cs" />
+    <Compile Include="Interfases\IGameStaff.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

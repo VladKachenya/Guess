@@ -6,7 +6,6 @@
         int? MinNamber { get; set; }
         int? GuessesNamber { get; set; }
         void SetNuberOfAttempts();
-
         int TryGuess(int num);
 
     }

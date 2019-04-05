@@ -7,5 +7,7 @@ namespace GuessCore.Interfaсes
         void Initialize();
         IRetryCounter GetRetryCounter();
         IInteractor this[InteractorKey key] { get; }
+        string GetPlayerState();
+
     }
 }

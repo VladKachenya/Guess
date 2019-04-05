@@ -1,0 +1,10 @@
+C:\Users\Vlad_UPR\Desktop\GitHub Repositores\Guess\GuessInfrastructure\bin\Debug\GuessInfrastructure.dll
+C:\Users\Vlad_UPR\Desktop\GitHub Repositores\Guess\GuessInfrastructure\bin\Debug\GuessInfrastructure.pdb
+C:\Users\Vlad_UPR\Desktop\GitHub Repositores\Guess\GuessInfrastructure\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Vlad_UPR\Desktop\GitHub Repositores\Guess\GuessInfrastructure\bin\Debug\Newtonsoft.Json.pdb
+C:\Users\Vlad_UPR\Desktop\GitHub Repositores\Guess\GuessInfrastructure\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Vlad_UPR\Desktop\GitHub Repositores\Guess\GuessInfrastructure\obj\Debug\GuessInfrastructure.csprojAssemblyReference.cache
+C:\Users\Vlad_UPR\Desktop\GitHub Repositores\Guess\GuessInfrastructure\obj\Debug\GuessInfrastructure.csproj.CoreCompileInputs.cache
+C:\Users\Vlad_UPR\Desktop\GitHub Repositores\Guess\GuessInfrastructure\obj\Debug\GuessInfrastructure.csproj.CopyComplete
+C:\Users\Vlad_UPR\Desktop\GitHub Repositores\Guess\GuessInfrastructure\obj\Debug\GuessInfrastructure.dll
+C:\Users\Vlad_UPR\Desktop\GitHub Repositores\Guess\GuessInfrastructure\obj\Debug\GuessInfrastructure.pdb

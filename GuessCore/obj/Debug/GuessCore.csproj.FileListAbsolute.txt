@@ -10,3 +10,9 @@ C:\Users\VlAD\Desktop\EpamTasks\Guess\GuessCore\obj\Debug\GuessCore.dll
 C:\Users\VlAD\Desktop\EpamTasks\Guess\GuessCore\obj\Debug\GuessCore.pdb
 C:\Users\VlAD\Desktop\EpamTasks\Guess\GuessCore\bin\Debug\GuessCore.dll
 C:\Users\VlAD\Desktop\EpamTasks\Guess\GuessCore\bin\Debug\GuessCore.pdb
+C:\Users\Vlad_UPR\Desktop\GitHub Repositores\Guess\GuessCore\bin\Debug\GuessInfrastructure.dll
+C:\Users\Vlad_UPR\Desktop\GitHub Repositores\Guess\GuessCore\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Vlad_UPR\Desktop\GitHub Repositores\Guess\GuessCore\bin\Debug\GuessInfrastructure.pdb
+C:\Users\Vlad_UPR\Desktop\GitHub Repositores\Guess\GuessCore\bin\Debug\Newtonsoft.Json.pdb
+C:\Users\Vlad_UPR\Desktop\GitHub Repositores\Guess\GuessCore\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Vlad_UPR\Desktop\GitHub Repositores\Guess\GuessCore\obj\Debug\GuessCore.csproj.CopyComplete

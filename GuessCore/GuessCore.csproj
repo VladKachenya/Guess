@@ -41,17 +41,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Converters\ToGameTypeConverter.cs" />
     <Compile Include="Converters\ToIntConverter.cs" />
     <Compile Include="Converters\ToLevelConverter.cs" />
     <Compile Include="Facade\GuessFacade.cs" />
+    <Compile Include="Helpers\GameTypeKey.cs" />
     <Compile Include="Helpers\InteractorKey.cs" />
     <Compile Include="Helpers\LevelKey.cs" />
     <Compile Include="Helpers\OperationResult.cs" />
+    <Compile Include="Helpers\StaticStringValidationHelper.cs" />
     <Compile Include="Interactors\Base\InteractorBase.cs" />
     <Compile Include="Interactors\GuessInteractor.cs" />
     <Compile Include="Interactors\LoginInteractor.cs" />
     <Compile Include="Interactors\RespondentAutoConfigureInteractor.cs" />
     <Compile Include="Interactors\RespondentManualConfigureInteractor.cs" />
+    <Compile Include="Interactors\SaveCurentPlayerInteractor.cs" />
     <Compile Include="Interfaсes\IGuessFacade.cs" />
     <Compile Include="Interfaсes\IInteractor.cs" />
     <Compile Include="Interfaсes\IRespondent.cs" />
@@ -60,6 +64,11 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ProcessEntitys\Respondent.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\GuessInfrastructure\GuessInfrastructure.csproj">
+      <Project>{85CB2D0E-E243-417C-B121-AEA2DE820E78}</Project>
+      <Name>GuessInfrastructure</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

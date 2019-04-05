@@ -32,7 +32,6 @@ namespace GuessCore.Interactors
                 return new OperationResult(false, $"Вы израсходывали все свои попытки");
             }
             var tryGuessRes = _respondent.TryGuess(nam);
-
             if (tryGuessRes < 0)
             {
                 return new OperationResult(false, $"{_range} и больше {nam}");
@@ -41,8 +40,7 @@ namespace GuessCore.Interactors
             {
                 return new OperationResult(false, $"{_range} и меньше {nam}");
             }
-
-            return new OperationResult();
+            return new OperationResult(true, "Вы победили!");
         }
     }
 }
