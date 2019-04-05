@@ -1,15 +1,18 @@
-﻿using System;
-using GuessCore.Helpers;
+﻿using GuessCore.Helpers;
 using GuessCore.Interactors.Base;
 using GuessCore.Interfaсes;
+using GuessInfrastructure.Model;
+using System;
 
 namespace GuessCore.Interactors
 {
     public class RespondentAutoConfigureInteractor : InteractorBase<LevelKey>, IInteractor
     {
-        Random random = new Random();
-        public RespondentAutoConfigureInteractor(IRespondent respondent, IConverter<LevelKey> converter) : base(respondent, converter)
+        private readonly Func<Player> _getPlayer;
+        private Random random = new Random();
+        public RespondentAutoConfigureInteractor(IRespondent respondent, IConverter<LevelKey> converter, Func<Player> getPlayer) : base(respondent, converter)
         {
+            _getPlayer = getPlayer;
         }
 
         public OperationResult Interact(string request)
@@ -31,10 +34,11 @@ namespace GuessCore.Interactors
                 case LevelKey.Hard: ConfigureRespondent(1000); break;
             }
 
+            _getPlayer().GameCounter++;
             return new OperationResult();
         }
 
-        void ConfigureRespondent(int range)
+        private void ConfigureRespondent(int range)
         {
             _respondent.MinNamber = random.Next(0, 10000 - range);
             _respondent.MaxNamber = _respondent.MinNamber + range;

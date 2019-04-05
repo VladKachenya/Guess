@@ -23,3 +23,8 @@ C:\Users\Vlad_UPR\Desktop\GitHub Repositores\Guess\GuessConsole\GuessConsole\bin
 C:\Users\Vlad_UPR\Desktop\GitHub Repositores\Guess\GuessConsole\GuessConsole\bin\Debug\GuessInfrastructure.pdb
 C:\Users\Vlad_UPR\Desktop\GitHub Repositores\Guess\GuessConsole\GuessConsole\bin\Debug\Newtonsoft.Json.pdb
 C:\Users\Vlad_UPR\Desktop\GitHub Repositores\Guess\GuessConsole\GuessConsole\bin\Debug\Newtonsoft.Json.xml
+C:\Users\VlAD\Desktop\EpamTasks\Guess\GuessConsole\GuessConsole\bin\Debug\GuessInfrastructure.dll
+C:\Users\VlAD\Desktop\EpamTasks\Guess\GuessConsole\GuessConsole\bin\Debug\Newtonsoft.Json.dll
+C:\Users\VlAD\Desktop\EpamTasks\Guess\GuessConsole\GuessConsole\bin\Debug\GuessInfrastructure.pdb
+C:\Users\VlAD\Desktop\EpamTasks\Guess\GuessConsole\GuessConsole\bin\Debug\Newtonsoft.Json.pdb
+C:\Users\VlAD\Desktop\EpamTasks\Guess\GuessConsole\GuessConsole\bin\Debug\Newtonsoft.Json.xml

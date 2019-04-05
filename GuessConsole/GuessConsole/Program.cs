@@ -36,29 +36,6 @@ namespace GuessConsole
 
             } while (true);
 
-
-            
-
-
-            //while (!isBreak)
-            //{
-            //    Console.WriteLine("Ввидите уровень (Easy, Medium, Hard)");
-            //    var nam = Console.ReadLine();
-            //    isBreak = ConsoleHelper.GetResponse(guess[InteractorKey.RespondentAutoConfigure], nam);
-            //}
-            //Console.Clear();
-
-            //isBreak = false;
-            //var retryCounter = guess.GetRetryCounter();
-            //isBreak = ConsoleHelper.GetResponse(guess[InteractorKey.Guess], "");
-            //while (!isBreak)
-            //{
-            //    Console.WriteLine($"Оставшееся число попыток {retryCounter.Attempts}/{retryCounter.NumberOfAttempts}");
-            //    Console.WriteLine("Введите число");
-            //    var nam = Console.ReadLine();
-            //    isBreak = ConsoleHelper.GetResponse(guess[InteractorKey.Guess], nam);
-            //}
-            //Console.Clear();
         }
 
 

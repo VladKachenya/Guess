@@ -29,7 +29,7 @@ namespace GuessCore.Facade
             var playerRepository = new PlayerRepository();
             _interactors.Clear();
             _interactors.Add(InteractorKey.Guess, new GuessInteractor(respondent, toIntConverter));
-            _interactors.Add(InteractorKey.RespondentAutoConfigure, new RespondentAutoConfigureInteractor(respondent, new ToLevelConverter()));
+            _interactors.Add(InteractorKey.RespondentAutoConfigure, new RespondentAutoConfigureInteractor(respondent, new ToLevelConverter(), () => _player));
             _interactors.Add(InteractorKey.RespondentManualConfigure, new RespondentManualConfigureInteractor(respondent, toIntConverter));
             _interactors.Add(InteractorKey.Login, new LoginInteractor(playerRepository, el => _player = el));
             _interactors.Add(InteractorKey.SaveCurentPlayer, new SaveCurentPlayerInteractor(playerRepository, respondent, () => _player));
@@ -49,7 +49,8 @@ namespace GuessCore.Facade
             {
                 return "Игрок не установлен";
             }
-            return $"{_player.Name} : {_player.Score}";
+
+            return $"Игрок : {_player.Name}; Общий счёт : {_player.Score}; Количество игр : {_player.GameCounter}";
         }
          
     }

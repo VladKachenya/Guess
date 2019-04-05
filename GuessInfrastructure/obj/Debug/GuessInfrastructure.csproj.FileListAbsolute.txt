@@ -8,3 +8,13 @@ C:\Users\Vlad_UPR\Desktop\GitHub Repositores\Guess\GuessInfrastructure\obj\Debug
 C:\Users\Vlad_UPR\Desktop\GitHub Repositores\Guess\GuessInfrastructure\obj\Debug\GuessInfrastructure.csproj.CopyComplete
 C:\Users\Vlad_UPR\Desktop\GitHub Repositores\Guess\GuessInfrastructure\obj\Debug\GuessInfrastructure.dll
 C:\Users\Vlad_UPR\Desktop\GitHub Repositores\Guess\GuessInfrastructure\obj\Debug\GuessInfrastructure.pdb
+C:\Users\VlAD\Desktop\EpamTasks\Guess\GuessInfrastructure\bin\Debug\GuessInfrastructure.dll
+C:\Users\VlAD\Desktop\EpamTasks\Guess\GuessInfrastructure\bin\Debug\GuessInfrastructure.pdb
+C:\Users\VlAD\Desktop\EpamTasks\Guess\GuessInfrastructure\bin\Debug\Newtonsoft.Json.dll
+C:\Users\VlAD\Desktop\EpamTasks\Guess\GuessInfrastructure\bin\Debug\Newtonsoft.Json.pdb
+C:\Users\VlAD\Desktop\EpamTasks\Guess\GuessInfrastructure\bin\Debug\Newtonsoft.Json.xml
+C:\Users\VlAD\Desktop\EpamTasks\Guess\GuessInfrastructure\obj\Debug\GuessInfrastructure.csprojAssemblyReference.cache
+C:\Users\VlAD\Desktop\EpamTasks\Guess\GuessInfrastructure\obj\Debug\GuessInfrastructure.csproj.CoreCompileInputs.cache
+C:\Users\VlAD\Desktop\EpamTasks\Guess\GuessInfrastructure\obj\Debug\GuessInfrastructure.csproj.CopyComplete
+C:\Users\VlAD\Desktop\EpamTasks\Guess\GuessInfrastructure\obj\Debug\GuessInfrastructure.dll
+C:\Users\VlAD\Desktop\EpamTasks\Guess\GuessInfrastructure\obj\Debug\GuessInfrastructure.pdb
